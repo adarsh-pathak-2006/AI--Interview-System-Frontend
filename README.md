@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Interview Platform - Frontend UI 💻
 
-## Getting Started
+This is the frontend user interface for the AI Interview Platform. It is built entirely from scratch using **Next.js (App Router)** and styled with a custom **Tailwind CSS Glassmorphism** aesthetic. 
 
-First, run the development server:
+## 🛠 Tech Stack
+- **Framework**: Next.js (React)
+- **Styling**: Tailwind CSS (Custom Dark Mode & Glassmorphism)
+- **Icons**: Lucide React
+- **Networking**: Axios (with custom JWT interceptors)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 Key Features
+- **Stunning UI**: Deep space backgrounds with interactive glassmorphism components and dynamic CSS animations.
+- **Secure Sessions**: Automated JWT handling. Axios interceptors automatically attach access tokens and refresh them seamlessly in the background.
+- **Dashboard**: A sleek interface to manage your resume profile and dynamically add technical projects via a pop-up modal.
+- **Interactive Interview Room**: A progressive chat-like interface that renders AI questions, accepts technical answers, and displays immediate grading and feedback.
+- **Analysis Report**: A highly visual post-interview dashboard displaying overall performance scores, strengths, and areas for improvement.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Local Setup Instructions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/adarsh-pathak-2006/AI--Interview-System-Frontend.git
+   cd AI--Interview-System-Frontend
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Environment Variables:**
+   Create a `.env.local` file in the root directory and define the backend URL:
+   ```env
+   NEXT_PUBLIC_API_URL=http://localhost:8000
+   ```
+   *(Change this to your Render URL in production)*
 
-To learn more about Next.js, take a look at the following resources:
+4. **Start the Development Server:**
+   ```bash
+   npm run dev
+   ```
+   The application will boot up at `http://localhost:3000`. 
+   
+   *Note: Ensure your Django backend is running simultaneously on port 8000 for the app to function properly.*
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Deployment
+This project is fully optimized for **Vercel**. Simply import the repository to Vercel, set the `NEXT_PUBLIC_API_URL` environment variable, and deploy!
