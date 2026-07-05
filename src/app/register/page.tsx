@@ -24,7 +24,6 @@ export default function Register() {
     setLoading(true);
     try {
       await apiClient.post("/auth/register/", formData);
-      // Auto login
       const res = await apiClient.post("/auth/login/", {
         username: formData.username,
         password: formData.password

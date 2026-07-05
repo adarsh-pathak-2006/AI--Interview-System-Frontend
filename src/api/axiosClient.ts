@@ -36,7 +36,6 @@ apiClient.interceptors.response.use(
         apiClient.defaults.headers.common['Authorization'] = `Bearer ${response.data.access}`;
         return apiClient(originalRequest);
       } catch (refreshError) {
-        // If refresh fails, clear tokens
         localStorage.removeItem('access_token');
         localStorage.removeItem('refresh_token');
         if (typeof window !== 'undefined') {

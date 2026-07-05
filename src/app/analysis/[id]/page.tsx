@@ -28,8 +28,8 @@ export default function AnalysisPage() {
     }
   };
 
-  if (loading) return <div className="flex-center min-h-screen"><Loader2 className="w-10 h-10 animate-spin text-indigo-500" /></div>;
-  if (!interview || !interview.analysis) return <div className="flex-center min-h-screen">Analysis not ready yet.</div>;
+  if (loading) return <div className="flex items-center justify-center min-h-screen"><Loader2 className="w-10 h-10 animate-spin text-indigo-500" /></div>;
+  if (!interview || !interview.analysis) return <div className="flex items-center justify-center min-h-screen">Analysis not ready yet.</div>;
 
   const analysis = interview.analysis;
 
@@ -38,7 +38,7 @@ export default function AnalysisPage() {
       <div className="w-full max-w-5xl space-y-8 animate-in fade-in slide-in-from-bottom-4">
         
         <div className="flex justify-between items-center mb-8">
-          <Link href="/dashboard" className="text-gray-400 hover:text-white flex items-center gap-2">
+          <Link href="/dashboard" className="text-gray-400 hover:text-white flex items-center gap-2 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Dashboard
           </Link>
           <div className="px-4 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-sm font-semibold border border-indigo-500/30">
@@ -141,6 +141,5 @@ function ScoreCard({ title, score, icon }: { title: string, score: number, icon:
   );
 }
 
-// Dummy icons
 const CodeIcon = (props: any) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>;
 const ChatIcon = (props: any) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>;
